@@ -1,14 +1,13 @@
 import React from "react";
 import { MdOutlineWavingHand } from "react-icons/md";
 
-const About: React.FC = () => (
+const Home: React.FC = () => (
   <section className="aboutme-content">
-    <img className="portfolioimg" src="./assets/portfolioimg.png" />
+    <img className="mae-img" src="./assets/portfolioimg.png" />
     <h2>
-      Hello, I'm Victoria Mata{" "}
+      Welcome to Nessa's Kitchen{" "}
       <MdOutlineWavingHand style={{ fontSize: "39px" }} />{" "}
     </h2>
-    <h3> Software Development Student</h3>
     <p className="aboutme-p">
       I was born and raised in South Florida, until I moved with my family to
       Knoxville, Tennessee at 16 years old. After living there for 5 years, I
@@ -25,4 +24,4 @@ const About: React.FC = () => (
   </section>
 );
 
-export default About;
+export default Home;

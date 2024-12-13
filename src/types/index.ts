@@ -1,4 +1,4 @@
-export interface Project {
+export interface Meal {
   title: string;
   description: string;
   imageUrl: string;

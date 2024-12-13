@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #aec3b0;
 }
 
@@ -87,7 +87,7 @@ header {
 .aboutme-p {
   max-width: 700px;
   line-height: 1.6; /* Space between lines for readability */
-  margin: 0;
+  /* margin: 0;
   padding: 20px;
 }
 
@@ -100,17 +100,17 @@ header {
   margin: 0px;
   color: #01161e;
   box-sizing: border-box;
-  flex-direction: column; /* Stack image and text in a column */
+  flex-direction: column; Stack image and text in a column
   font-family: "Roboto Slab", serif;
-}
+} */
 
-.card-container {
+/* .card-container {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  gap: 1.5rem; /* Space between cards */
-}
-.project-card {
+  grid-template-columns: repeat(2, 1fr); 2 cards per row
+  gap: 1.5rem; Space between cards
+} */
+/* .project-card {
   background-color: #01161e;
   margin: 20px;
   color: #eff6e0;
@@ -137,31 +137,31 @@ header {
 .links {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem; /* Space between image and icon */
-  margin-top: 1rem;
+  align-items: center; */
+  /* gap: 1rem; /* Space between image and icon */
+  /* margin-top: 1rem;
 }
 
 .icon-link {
   color: #eff6e0; /* Set icon color */
-}
+/* }
 
-.icon-link:hover {
-  color: #555; /* Hover color for icon */
-}
+.icon-link:hover { */
+  /* color: #555; /* Hover color for icon */
+/* }
 
 .contact-form {
   max-width: 500px;
   margin: auto;
-  /*padding: 80px;*/
-  font-family: "Roboto Slab", serif;
-}
+  padding: 80px; */
+  /* font-family: "Roboto Slab", serif;
+}  */
 
-.contact-form form {
+/* .contact-form form {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
+} 
 
 .contact-form input,
 .contact-form textarea {
@@ -219,6 +219,6 @@ header {
   display: flex;
   justify-content: center;
   gap: 15px; /* Space between icons */
-  font-size: 3rem;
+  /* font-size: 3rem;
   margin-top: 50px;
-}
+} */  

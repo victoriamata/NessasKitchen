@@ -4,32 +4,27 @@ import { NavLink } from "react-router-dom";
 const Header: React.FC = () => (
   <header className="header">
     <div className="header-left">
-      <h1>Victoria Mata</h1>
+      <h1>Nessa's Kitchen</h1>
+      <h2>Made With Love to Satisfy Your Tastebuds</h2>
     </div>
     <nav className="nav-tabs">
       <NavLink
-        to="/about"
+        to="/home"
         className={({ isActive }) => (isActive ? "active" : "nav-link")}
       >
-        About Me
+        Home
       </NavLink>
       <NavLink
-        to="/projects"
+        to="/menu"
         className={({ isActive }) => (isActive ? "active" : "nav-link")}
       >
-        Portfolio
+        Menu
       </NavLink>
       <NavLink
         to="/contact"
         className={({ isActive }) => (isActive ? "active" : "nav-link")}
       >
         Contact
-      </NavLink>
-      <NavLink
-        to="/resume"
-        className={({ isActive }) => (isActive ? "active" : "nav-link")}
-      >
-        Resume
       </NavLink>
     </nav>
   </header>

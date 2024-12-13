@@ -1,12 +1,12 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard";
+import MenuCard from "../components/MenuCard";
 
-const Projects: React.FC = () => (
+const Menu: React.FC = () => (
   <section>
     <h2 className="project-heading">Projects</h2>
     <div className="card-container">
       <div className="project-card">
-        <ProjectCard
+        <MenuCard
           title="CoolShirts Store"
           description="I collaborated with a group to create this website using HTML, CSS, and JavaScript. "
           imageUrl="./assets/coolshirts.png"
@@ -15,7 +15,7 @@ const Projects: React.FC = () => (
         />
       </div>
       <div className="project-card">
-        <ProjectCard
+        <MenuCard
           title="Daily Weather"
           description="Using server API's, this application allows a traveling user to view a 5 day forecast at any location, so that they can plan a trip and activities accordingly."
           imageUrl="./assets/dailyweather.png"
@@ -24,7 +24,7 @@ const Projects: React.FC = () => (
         />
       </div>
       <div className="project-card">
-        <ProjectCard
+        <MenuCard
           title="Nessa's Kitchen"
           description="This application will be coming soon, and created with React Typescript. This app will allow users to book a catering service and view a menu. "
           imageUrl="./assets/coming-soon.png"
@@ -33,7 +33,7 @@ const Projects: React.FC = () => (
         />
       </div>
       <div className="project-card">
-        <ProjectCard
+        <MenuCard
           title="Coming Soon"
           description="This project is a placeholder for future projects that have not been created yet. "
           imageUrl="./assets/coming-soon.png"
@@ -42,7 +42,7 @@ const Projects: React.FC = () => (
         />
       </div>
       <div className="project-card">
-        <ProjectCard
+        <MenuCard
           title="Coming Soon"
           description="This project is a placeholder for future projects that have not been created yet. "
           imageUrl="./assets/coming-soon.png"
@@ -51,7 +51,7 @@ const Projects: React.FC = () => (
         />
       </div>
       <div className="project-card">
-        <ProjectCard
+        <MenuCard
           title="Coming Soon"
           description="This project is a placeholder for future projects that have not been created yet. "
           imageUrl="./assets/coming-soon.png"
@@ -63,4 +63,4 @@ const Projects: React.FC = () => (
   </section>
 );
 
-export default Projects;
+export default Menu;

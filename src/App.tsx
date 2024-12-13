@@ -13,7 +13,7 @@ const App: React.FC = () => {
         <Header />
         <div className="content-wrap">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

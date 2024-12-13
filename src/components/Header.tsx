@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 const Header: React.FC = () => (
   <header className="header">
     <div className="header-left">
+    <img className='logo' src='./assets/logo.jpg' alt='logo'/>
       <h1>Nessa's Kitchen</h1>
-      <h2>Made With Love to Satisfy Your Tastebuds</h2>
+      <h2>"Made With Love to Satisfy Your Tastebuds"</h2>
     </div>
     <nav className="nav-tabs">
       <NavLink

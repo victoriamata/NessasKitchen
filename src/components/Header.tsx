@@ -4,13 +4,15 @@ import { NavLink } from "react-router-dom";
 const Header: React.FC = () => (
   <header className="header">
     <div className="header-left">
-    <img className='logo' src='./assets/logo.jpg' alt='logo'/>
+      <img className="logo" src="./assets/logo.jpg" alt="logo" />
+    </div>
+    <div className="header-center">
       <h1>Nessa's Kitchen</h1>
       <h2>"Made With Love to Satisfy Your Tastebuds"</h2>
     </div>
     <nav className="nav-tabs">
       <NavLink
-        to="/home"
+        to="/"
         className={({ isActive }) => (isActive ? "active" : "nav-link")}
       >
         Home

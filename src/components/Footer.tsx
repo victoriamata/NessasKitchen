@@ -1,32 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { CiFacebook } from "react-icons/ci";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { IoCallOutline } from "react-icons/io5";
 
 const FooterTabs: React.FC = () => {
   return (
     <nav className="footer">
       <a
-        href="https://www.linkedin.com/in/victoria-mata-8676a932b/"
+        href="mailto:nessaskitchenofficial@gmail.com"
         target="_blank"
         className="footer-icon"
       >
-        <FaLinkedin size={24} />
+       <MdOutlineMailOutline size={30}/>
       </a>
       <a
-        href="https://www.github.com/victoriamata"
+        href="https://www.facebook.com/profile.php?id=61570623114733"
         target="_blank"
         className="footer-icon"
       >
-        <FaGithub size={24} />
+       <CiFacebook size={30}/>
       </a>
       <a
-        href="https://www.linkedin.com/in/victoria-mata-8676a932b/"
+        href="tel:+19546963001"
         target="_blank"
         className="footer-icon"
       >
-        <FaXTwitter size={24} />
+       <IoCallOutline size={30}/>
       </a>
     </nav>
   );

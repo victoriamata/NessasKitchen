@@ -1,27 +1,38 @@
 import React, { useState } from "react";
-import { MdContactPage } from "react-icons/md";
+import emailjs from "emailjs-com";
 
 const Contact: React.FC = () => {
-  // State variables for each input field
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [formStatus, setFormStatus] = useState(""); // Status message
 
-  // Handler function for form submission
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    // Check if all fields are filled out
     if (!name || !email || !message) {
-      setFormStatus("Please complete form.");
-    } else {
-      setFormStatus("Submitted contact form.");
-      // Clear the form fields after submission
-      setName("");
-      setEmail("");
-      setMessage("");
+      setFormStatus("Please complete the form.");
+      return;
     }
+
+    emailjs
+      .send(
+        "service_5r5jpqr", // EmailJS service ID
+        "template_8k9y1ux", // EmailJS template ID
+        { name, email, message },
+        "WR7JcmEyY52HfNbMh" // EmailJS user ID/ api public key
+      )
+      .then(
+        () => {
+          setFormStatus("Email sent successfully!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        () => {
+          setFormStatus("Failed to send email. Please try again later.");
+        }
+      );
   };
 
   return (

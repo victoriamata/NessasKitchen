@@ -3,7 +3,6 @@ import MenuCard from "../components/MenuCard";
 
 const Menu: React.FC = () => (
   <section>
-    <h2 className="project-heading">Projects</h2>
     <div className="card-container">
       <div className="project-card">
         <MenuCard

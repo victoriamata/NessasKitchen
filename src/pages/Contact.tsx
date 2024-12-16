@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
 
   return (
     <section className="contact-form">
-      <h2>Contact Me</h2>
+      <h2>Book Now!</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>

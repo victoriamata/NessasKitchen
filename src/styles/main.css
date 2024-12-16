@@ -5,10 +5,7 @@
 }
 
 html, body {
-  background: rgb(58,180,179);
-background: linear-gradient(90deg, rgba(58,180,179,1) 0%, rgba(82,180,75,1) 50%, rgba(254,167,44,1) 100%);
-background-repeat: no-repeat;
-background-size: cover;
+background-color:#fff4e5;
 }
 
 body {
@@ -24,9 +21,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: white;
-  color: #222;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: black;
+  color: #fff4e5;
+  font-family: "Margarine", sans-serif;
 }
 
 .header-left {
@@ -36,6 +33,7 @@ header {
 
 .logo {
   height: 150px; /* Adjust size as needed */
+  filter: invert(100%);
 }
 
 .header-center {
@@ -51,30 +49,38 @@ header {
 .header-center h2 {
   font-size: 1rem;
   margin: 0;
-  font-style: italic; /* Optional for styling */
+  font-family: "Parkinsans", sans-serif;
 }
 
 .nav-tabs {
   display: flex;
   gap: 1rem;
   font-weight: bold;
+  font-size: 20px;
+  font-family: "Parkinsans", sans-serif;
+  text-decoration: none;
+}
+
+/* Remove default visited link styles */
+.nav-tabs .nav-link:visited {
+  color: inherit;        /* Inherit color from the active or default state */
+  text-decoration: none; /* Prevent underline for visited links */
 }
 
 .nav-tabs .nav-link.active {
-  text-decoration: none; /* Remove underline for active link */
-  color: darkred;        /* Optional: Highlight the active link */
-  font-weight: bolder;   /* Optional: Emphasize the active link */
+  color: inherit; 
+  text-decoration: none; 
+  font-weight: bolder;  
 }
 
 .nav-tabs .nav-link:hover {
   color: darkred;
   font-weight: bolder;
+  text-decoration: none;
 }
 
 .nav-tabs .nav-link {
   text-decoration: none;
-  color: #222;
-  transition: color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -115,28 +121,57 @@ header {
   }
 }
 
+.home-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.homeimage {
+  display: block; /* Removes inline spacing if the image is treated as an inline element */
+  width: 100%; /* Ensures the image stretches to fill the full width */
+  height: auto; /* Maintains the image's aspect ratio */
+}
+
+@media (min-width: 1024px) {
+  .homeimage {
+    max-width: 100%; /* Ensure full-width display */
+    image-rendering: crisp-edges; /* Maintain sharpness */
+  }
+}
 
 .container-home {
-  background-color: #333;
-  border-color:black;
-  border-style:solid;
-  border-radius:20px;
-  width: 400px;
-  color: white;
-  margin-left: 50px;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  background-color: #8c0209;
+  border-color: black;
+  border-style: solid;
+  border-radius: 20px;
+  width: 700px;
+  color: #fff4e5;
+  display: flex;
+  font-family: "Parkinsans", sans-serif;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Ensures that the text and image are stacked vertically */
 }
+
 .mae-img {
   width: auto;
-  margin-left: 20px;
   height: 300px;
   border-radius: 20px;
-  margin: 20px;
+  margin: 0; /* Reset any margin */
+  margin-top: 20px;
 }
 
 .home-text {
-  margin:10px;
+  margin: 40px;
+  font-family: "Parkinsans", sans-serif;
+  text-align: center; /* Optional: Center text within the container */
 }
 
 /* Contact form container styling */
@@ -158,6 +193,7 @@ header {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #333;
+  font-family: "Parkinsans", sans-serif;
 }
 
 /* Form labels */
@@ -246,9 +282,9 @@ header {
   margin: 2rem auto;
   max-width: 1200px;
   padding: 0 1rem;
+  font-family: "Parkinsans", sans-serif;
 }
 
-/* Individual project card styling */
 .project-card {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -256,6 +292,7 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem; /* Add padding inside each card */
 }
 
 .project-card img {
@@ -264,11 +301,12 @@ header {
   max-height: 200px; /* Limit image height */
   object-fit: cover; /* Ensure the image scales nicely */
   border-bottom: 1px solid #ddd; /* Optional: Separate image from text */
+  margin-bottom: 0.5rem; /* Add space between the image and the content */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 12px darkred;
 }
 
 /* Responsive design */
@@ -284,8 +322,6 @@ header {
   }
 }
 
-
-
 .footer {
   background-color: #222;
   color: white;
@@ -300,7 +336,6 @@ header {
 }
 
 .footer-icon {
-  font-size: 0.9rem;
   color: #fff4e5; /* Ensure the icons inherit white color */
   text-decoration: none; /* Removes underline from links */
   transition: transform 0.2s ease; /* Optional: Adds hover effect */

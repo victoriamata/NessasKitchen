@@ -9,340 +9,624 @@ background-color:#fff4e5;
 }
 
 body {
-  margin: 0; /* Removes default margin from the body */
+  margin: 0;
 }
 
 html {
-  height: 100%; /* Ensures the full height of the page is used */
+  height: 100%; 
 }
 
-header {
+.header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  background-color: black;
-  color: #fff4e5;
-  font-family: "Margarine", sans-serif;
+  background-color: #f8f8f8; 
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
+/* Left Section - Logo */
+.header-left .logo {
+  width: 120px; /* Adjust size */
+  height: auto;
+  border-radius: 50%;
 }
 
 .logo {
-  height: 150px; /* Adjust size as needed */
-  filter: invert(100%);
+  mix-blend-mode: multiply;
 }
 
+/* Center Section - Titles */
 .header-center {
   text-align: center;
-  flex: 1; /* Takes up the remaining space between logo and nav */
+  flex: 1;
 }
 
 .header-center h1 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
+  color: #333;
+  font-family: "Parkinsans", serif;
 }
 
 .header-center h2 {
-  font-size: 1rem;
-  margin: 0;
-  font-family: "Parkinsans", sans-serif;
+  font-size: 1.3rem;
+  color: #777;
+  font-style: italic;
 }
 
+/* Navigation Tabs */
 .nav-tabs {
   display: flex;
-  gap: 1rem;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: "Parkinsans", sans-serif;
+  gap: 1.5rem;
+}
+
+.nav-link {
   text-decoration: none;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-family: "Parkinsans", serif;
 }
 
-/* Remove default visited link styles */
-.nav-tabs .nav-link:visited {
-  color: inherit;        /* Inherit color from the active or default state */
-  text-decoration: none; /* Prevent underline for visited links */
+.nav-link:hover {
+  color: darkred; 
 }
 
-.nav-tabs .nav-link.active {
-  color: inherit; 
-  text-decoration: none; 
-  font-weight: bolder;  
-}
-
-.nav-tabs .nav-link:hover {
+.active {
   color: darkred;
-  font-weight: bolder;
-  text-decoration: none;
+  border-bottom: 2px solid darkred;
+  padding-bottom: 0.2rem;
+  font-family: "Parkinsans", serif;
 }
 
-.nav-tabs .nav-link {
-  text-decoration: none;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-  }
-
-  .header-center {
-    order: 2; /* Moves the center content below the logo and nav */
-    margin: 1rem 0;
-  }
-
-  .nav-tabs {
-    order: 3; /* Stacks navigation below the logo and header-center */
-    justify-content: center;
-    width: 100%;
+  .header {
+    flex-direction: column;
+    text-align: center;
   }
 
   .header-left {
-    order: 1;
-    justify-content: center;
-    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-center h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-tabs {
+    margin-top: 1rem;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .header-center h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .header-center h2 {
     font-size: 0.9rem;
   }
 
-  .nav-tabs {
-    flex-direction: column;
-    gap: 0.5rem;
+  .nav-link {
+    font-size: 0.9rem;
   }
 }
 
 .home-content {
-  margin: 0;
-  padding: 0;
+  font-family: "Parkinsans", serif;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.homeimage {
   width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 2rem;
 }
 
 .flex {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-}
-
-.homeimage {
-  display: block; /* Removes inline spacing if the image is treated as an inline element */
-  width: 100%; /* Ensures the image stretches to fill the full width */
-  height: auto; /* Maintains the image's aspect ratio */
-}
-
-@media (min-width: 1024px) {
-  .homeimage {
-    max-width: 100%; /* Ensure full-width display */
-    image-rendering: crisp-edges; /* Maintain sharpness */
-  }
+  align-items: center;
 }
 
 .container-home {
-  background-color: #8c0209;
-  border-color: black;
-  border-style: solid;
-  border-radius: 20px;
-  width: 700px;
-  color: #fff4e5;
-  display: flex;
-  font-family: "Parkinsans", sans-serif;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Ensures that the text and image are stacked vertically */
+  max-width: 800px;
+  text-align: center;
 }
 
 .mae-img {
-  width: auto;
-  height: 300px;
+  max-width: 150px;
   border-radius: 20px;
-  margin: 0; /* Reset any margin */
-  margin-top: 20px;
+  margin-bottom: 1rem;
 }
 
 .home-text {
-  margin: 40px;
-  font-family: "Parkinsans", sans-serif;
-  text-align: center; /* Optional: Center text within the container */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 1rem;
 }
 
-/* Contact form container styling */
+/* Social Media Section */
+.social-media-section {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 1rem;
+  background-color: #f8f8f8; 
+  border-top: 2px solid #ddd; /* Separator */
+  border-bottom: 2px solid #ddd;
+}
+
+.social-media-section h2 {
+  /* font-size: 1.8rem; */
+  color: darkred;
+  margin-bottom: 1.5rem;
+}
+
+.social-media-section h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 1rem;
+  }
+
+  .container-home {
+    padding: 1.5rem;
+  }
+
+  .homeimage {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .container-home h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-text {
+    font-size: 0.9rem;
+  }
+
+  .mae-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* General Section Styling */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  box-sizing: border-box; /* Ensure padding and borders are included in width */
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Parkinsans", sans-serif;
+  text-align: center;
 }
 
-/* Form heading */
 .contact-form h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
   color: #333;
+  margin-bottom: 1rem;
   font-family: "Parkinsans", sans-serif;
 }
 
-/* Form labels */
-.contact-form label {
-  display: block;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.contact-form h3 {
+  font-size: 1.2rem;
   color: #555;
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Parkinsans", sans-serif;
 }
 
-/* Form input fields */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: calc(100% - 1.6rem); /* Adjust for padding on the sides */
-  padding: 0.8rem;
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Parkinsans", sans-serif;
+}
+
+label {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  box-sizing: border-box; /* Include padding and borders in width */
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
 }
 
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-  border-color: #007bff;
+input:focus,
+textarea:focus {
+  border-color: darkred; /* Tomato color for focus */
   outline: none;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  background: #fff;
 }
 
-/* Textarea customization */
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
+textarea {
+  resize: none;
+  height: 120px;
 }
 
-/* Submit button */
-.contact-form button {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
+/* Button Styling */
+button {
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #007bff;
+  background-color: darkred; /* Tomato color */
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: darkred;
 }
 
-/* Form status message */
+/* Form Status Message */
 .contact-form p {
-  text-align: center;
   margin-top: 1rem;
   font-size: 1rem;
-  color: #28a745;
+  color: #333;
+  font-style: italic;
 }
 
-/* Responsive design */
+/* Success Message */
+.contact-form p:contains("successfully") {
+  color: #28a745; /* Green for success */
+}
+
+/* Error Message */
+.contact-form p:contains("Failed") {
+  color: #dc3545; /* Red for errors */
+}
+
+.contact-form p:contains("complete") {
+  color: #dc3545; /* Red for errors */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .contact-form {
-    padding: 1rem;
+    padding: 1.5rem;
   }
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    width: 100%; /* Ensure full-width for small screens */
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
   }
 }
 
+/* General Section Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Parkinsans", sans-serif;
+  text-align: center;
+}
 
-/* Container for the project cards */
+.contact-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-form h3 {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: darkred;
+  outline: none;
+  background: #fff;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Button Styling */
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: darkred;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #dc3545;
+}
+
+/* Form Status Message */
+.contact-form p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+  font-style: italic;
+}
+
+/* Success Message */
+.contact-form p:contains("successfully") {
+  color: #28a745; /* Green for success */
+}
+
+/* Error Message */
+.contact-form p:contains("Failed") {
+  color: #dc3545; /* Red for errors */
+}
+
+.contact-form p:contains("complete") {
+  color: #dc3545; /* Red for errors */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* General Section Styling */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 1.5rem; /* Spacing between grid items */
-  margin: 2rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+  padding: 2rem;
   max-width: 1200px;
-  padding: 0 1rem;
+  margin: 0 auto;
   font-family: "Parkinsans", sans-serif;
+  background-color: #fdfdfd; /* Subtle background color */
 }
 
 .project-card {
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1rem; /* Add padding inside each card */
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  max-height: 200px; /* Limit image height */
-  object-fit: cover; /* Ensure the image scales nicely */
-  border-bottom: 1px solid #ddd; /* Optional: Separate image from text */
-  margin-bottom: 0.5rem; /* Add space between the image and the content */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px darkred;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive design */
+/* Menu Card Content */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  padding: 0 1rem 1rem;
+  text-align: center;
+}
+
+/* Add consistent spacing */
+.project-card h3,
+.project-card p {
+  margin: 0.5rem;
+}
+
+.menu-section {
+  margin-bottom: 3rem; /* Spacing between sections */
+  padding: 0 2rem;
+}
+
+.menu-title {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0; /* Underline effect */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.menu-title1 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0; /* Underline effect */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.menu-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-list li:hover {
+  background-color: #ffcc00; /* Bright highlight color */
+  color: white;
+  cursor: pointer;
+}
+
+.menu-list li:last-child {
+  border-bottom: none; /* Remove bottom border from the last item */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: 1fr; /* 1 column for small screens */
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 140px;
+  }
+
+  .project-card h3 {
+    font-size: 0.9rem;
   }
 }
 
 .footer {
-  background-color: #222;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 1rem 0;
   position: relative;
   width: 100%;
   margin-top: 2rem;
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Centers icons horizontally */
-  gap: 1rem; /* Adds space between icons */
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; 
 }
 
 .footer-icon {
-  color: #fff4e5; /* Ensure the icons inherit white color */
-  text-decoration: none; /* Removes underline from links */
-  transition: transform 0.2s ease; /* Optional: Adds hover effect */
+  color: #fff4e5; 
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 .footer-icon:hover {
-  transform: scale(1.2); /* Slightly enlarges the icon on hover */
+  transform: scale(1.2); 
 }
 
 

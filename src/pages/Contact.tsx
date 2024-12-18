@@ -38,6 +38,7 @@ const Contact: React.FC = () => {
   return (
     <section className="contact-form">
       <h2>Book Now!</h2>
+      <h3> *Serious Inquiries Only Please*</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>

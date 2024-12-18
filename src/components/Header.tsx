@@ -8,7 +8,7 @@ const Header: React.FC = () => (
     </div>
     <div className="header-center">
       <h1>Nessa's Kitchen</h1>
-      <h2>"Made With Love to Satisfy Your Tastebuds"</h2>
+      <h2>"Made With Love to Satisfy Your Tastebuds♡"</h2>
     </div>
     <nav className="nav-tabs">
       <NavLink

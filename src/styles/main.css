@@ -190,6 +190,11 @@ html {
   color: darkred;
 }
 
+.price-text {
+  font-weight: 300px;
+  margin-bottom: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .home-content {
@@ -563,9 +568,9 @@ button:hover {
 }
 
 .menu-list li:hover {
-  background-color: #ffcc00; /* Bright highlight color */
-  color: white;
-  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #333;
 }
 
 .menu-list li:last-child {

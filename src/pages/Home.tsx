@@ -8,6 +8,7 @@ const Home: React.FC = () => (
     <div className="social-media-section">
       <h2>Check Out Our Social Media</h2>
       <h3> Nessa's Kitchen Catering Service</h3>
+      <p className = "price-text">Now offering holiday specials. Please contact for pricing ◡̈</p>
       <div className="social-icons">
         <a
           href="mailto:nessaskitchenofficial@gmail.com"

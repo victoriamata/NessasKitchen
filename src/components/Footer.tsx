@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CiFacebook } from "react-icons/ci";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
 
 const FooterTabs: React.FC = () => {
   return (
@@ -27,6 +28,13 @@ const FooterTabs: React.FC = () => {
         className="footer-icon"
       >
        <IoCallOutline size={30}/>
+      </a>
+      <a
+        href="https://www.instagram.com/_nessaskitchen_/"
+        target="_blank"
+        className="footer-icon"
+      >
+       <FaInstagram size={30}/>
       </a>
     </nav>
   );

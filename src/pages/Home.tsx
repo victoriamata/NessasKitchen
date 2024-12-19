@@ -2,6 +2,7 @@ import React from "react";
 import { CiFacebook } from "react-icons/ci";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
 
 const Home: React.FC = () => (
   <section className="home-content">
@@ -34,6 +35,13 @@ const Home: React.FC = () => (
         >
           <IoCallOutline size={40} />
         </a>
+        <a
+        href="https://www.instagram.com/_nessaskitchen_/"
+        target="_blank"
+        className="social-icon"
+      >
+       <FaInstagram size={40}/>
+      </a>
       </div>
     </div>
     <img src="./assets/lasagna.png" className="homeimage" />

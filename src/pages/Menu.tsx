@@ -128,6 +128,13 @@ const Menu: React.FC = () => (
         </div>
         <div className="project-card">
           <MenuCard
+            title="Alfajores"
+            description=" Small or large cookies sprinkled with powdered sugar, with dulce de leche (caramel) in the middle."
+            imageUrl="./assets/alfajores.png"
+          />
+        </div>
+        <div className="project-card">
+          <MenuCard
             title="Latin Flan"
             description="Rich, silky caramel-topped baked custard.* New picture coming soon *"
             imageUrl="./assets/comingsoon.png"

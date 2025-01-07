@@ -135,9 +135,16 @@ const Menu: React.FC = () => (
         </div>
         <div className="project-card">
           <MenuCard
+            title="Tres Leches"
+            description="Creamy cake topped with wafers, homemade whipped cream, and fresh-cut strawberries. Comes in your choice of original vanilla, or strawberry cake. The featured picture shows one slice of our Strawberry Tres Leches."
+            imageUrl="./assets/tresleches.png"
+          />
+        </div>
+        <div className="project-card">
+          <MenuCard
             title="Latin Flan"
-            description="Rich, silky caramel-topped baked custard.* New picture coming soon *"
-            imageUrl="./assets/comingsoon.png"
+            description="Rich, silky caramel-topped baked custard."
+            imageUrl="./assets/flan.png"
           />
         </div>
       </div>

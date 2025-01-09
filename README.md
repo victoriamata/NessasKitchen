@@ -17,7 +17,7 @@
    Here is the link to the deployed application:
 https://nessaskitchen.netlify.app/
    
-   ![](./src/assets/screenshot.png)
+   ![](./public/assets/screenshot.png)
 
    ## License: 
    [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
